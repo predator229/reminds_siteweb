@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Damien Padonou">
+  <meta name="description" content="Download Reminds - A Flutter-based conversation app with secure authentication and multimedia messaging support">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <title>Reminds - Download</title>
+  <style>
+    :root {
+      --primary: #6d28d9;
+      --primary-dark: #4c1d95;
+      --background: #f8fafc;
+      --text: #1e293b;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .download-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .platform-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .platform-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+    }
+
+    .platform-name {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .download-btn {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .download-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 4rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="./images/favicon.png" alt="Reminds Logo" class="logo">
+      <h1>Download Reminds</h1>
+      <p class="subtitle">
+        Get the latest version of Reminds for your platform. Join the conversation today!
+      </p>
+    </header>
+
+    <section class="download-section">
+    <!--
+      <div class="platform-card">
+        <img src="./images/ios-icon.png" alt="iOS" class="platform-icon">
+        <div class="platform-name">iOS</div>
+        <a href="https://i.diawi.com/Yswp4C" target="_blanck" class="download-btn">Download Runner</a>
+      </div>
+     -->
+    <div class="platform-card">
+        <img src="./images/android-icon.png" alt="android" class="platform-icon">
+        <div class="platform-name">Android</div>
+        <a href="./downloads/reminds_android.apk" target="_blanck" class="download-btn">Download Android App</a>
+      </div>
+
+      <div class="platform-card">
+        <img src="./images/icon-web.png" alt="macOS" class="platform-icon">
+        <div class="platform-name">Web</div>
+        <a href="https://webreminds.cybersds.tech/" target="_blank" class="download-btn">See Web version</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Reminds. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/predator229/reminds" style="color: var(--primary);">GitHub</a> | 
+        <a href="mailto:plaisantin229@gmail.com" style="color: var(--primary);">Contact</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
