@@ -1,161 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Damien Padonou">
-  <meta name="description" content="Download Reminds - A Flutter-based conversation app with secure authentication and multimedia messaging support">
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-  <title>Reminds - Download</title>
-  <style>
-    :root {
-      --primary: #6d28d9;
-      --primary-dark: #4c1d95;
-      --background: #f8fafc;
-      --text: #1e293b;
-      --white: #ffffff;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--background);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      padding: 4rem 0;
-    }
-
-    .logo {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: #64748b;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .download-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin: 4rem 0;
-    }
-
-    .platform-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-
-    .platform-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .platform-icon {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 1rem;
-    }
-
-    .platform-name {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .download-btn {
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s;
-    }
-
-    .download-btn:hover {
-      background: var(--primary-dark);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 4rem;
-      border-top: 1px solid #e2e8f0;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .subtitle {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reminds : relire vos conversations Messenger, en privé</title>
+  <meta name="description" content="Reminds est une application iPhone privée pour relire vos conversations Messenger : recherche, photos, audios, calendrier, statistiques et « Ce jour-là ». Accès sur invitation.">
+  <link rel="canonical" href="https://reminds.cybersds.fr/">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbf7f4">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14110f">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Reminds">
+  <meta property="og:title" content="Reminds : relire vos conversations, en privé">
+  <meta property="og:description" content="Application iPhone privée pour relire vos conversations Messenger. Accès sur invitation.">
+  <meta property="og:url" content="https://reminds.cybersds.fr/">
+  <meta property="og:image" content="https://reminds.cybersds.fr/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Reminds, relire vos conversations en privé">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="./images/favicon.png" alt="Reminds Logo" class="logo">
-      <h1>Download Reminds</h1>
-      <p class="subtitle">
-        Get the latest version of Reminds for your platform. Join the conversation today!
-      </p>
-    </header>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <section class="download-section">
-    <!--
-      <div class="platform-card">
-        <img src="./images/ios-icon.png" alt="iOS" class="platform-icon">
-        <div class="platform-name">iOS</div>
-        <a href="https://i.diawi.com/Yswp4C" target="_blanck" class="download-btn">Download Runner</a>
-      </div>
-     -->
-    <div class="platform-card">
-        <img src="./images/android-icon.png" alt="android" class="platform-icon">
-        <div class="platform-name">Android</div>
-        <a href="./downloads/reminds_android.apk" target="_blanck" class="download-btn">Download Android App</a>
-      </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Reminds, accueil">
+        <img src="/images/icon-64.png" alt="" width="32" height="32">
+        <span>Reminds</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="#confidentialite">Confidentialité</a></li>
+          <li><a href="#acces">Accès</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Thème sombre">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
 
-      <div class="platform-card">
-        <img src="./images/icon-web.png" alt="macOS" class="platform-icon">
-        <div class="platform-name">Web</div>
-        <a href="https://webreminds.cybersds.tech/" target="_blank" class="download-btn">See Web version</a>
+  <main id="contenu">
+    <section class="hero" aria-labelledby="titre">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Application iPhone privée</p>
+          <h1 id="titre">Relisez vos conversations, en toute intimité.</h1>
+          <p class="lead">Reminds transforme l'export de vos discussions Messenger en un fil clair, que l'on parcourt et que l'on fouille : messages, photos, audios, dates et souvenirs. Pour vous seul, sur invitation.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:contact@cybersds.fr?subject=Invitation%20Reminds">Demander une invitation</a>
+            <a class="btn btn-secondary" href="#fonctionnalites">Voir les fonctionnalités</a>
+          </div>
+          <ul class="hero-note">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sur invitation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Chiffré en transit</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sans publicité ni traceur</li>
+          </ul>
+        </div>
+
+        <div class="phones" role="img" aria-label="Maquette de Reminds sur iPhone : une conversation fictive avec photo, audio et recherche, et l'écran « Ce jour-là ».">
+          <div class="phone phone-back">
+            <div class="phone-screen">
+              <span class="phone-island"></span>
+              <div class="phone-status"><span>9:41</span><span>100 %</span></div>
+              <div class="otd-title">
+                <small>14 juin</small>
+                <strong>Ce jour-là</strong>
+              </div>
+              <div class="otd-list">
+                <div class="otd-card"><b>Il y a 2 ans</b><p>« Bon anniversaire en avance ! »</p></div>
+                <div class="otd-card"><b>Il y a 6 ans</b><p>41 messages, 6 photos, 1 audio</p></div>
+                <div class="otd-card"><b>Il y a 7 ans</b><p>« On se retrouve à la gare à 18 h ? »</p></div>
+              </div>
+              <div class="otd-title"><small>Messages par mois</small></div>
+              <div class="mini-stats">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone phone-front">
+            <div class="phone-screen">
+              <span class="phone-island"></span>
+              <div class="phone-status"><span>9:41</span><span>100 %</span></div>
+              <div class="phone-bar">
+                <span class="avatar">C</span>
+                <span><strong>Camille</strong><small>2016 à 2023</small></span>
+                <span class="bar-icons">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </span>
+              </div>
+              <div class="chat">
+                <span class="day">Samedi 14 juin 2019</span>
+                <p class="bubble them">Tu te souviens du petit café près du port ?</p>
+                <p class="bubble me">Celui aux volets bleus ! On y retourne cet été.</p>
+                <span class="photo"></span>
+                <p class="bubble them">Regarde la lumière ce soir-là</p>
+                <span class="day">Dimanche 15 juin 2019</span>
+                <span class="audio">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                  <span>0:42</span>
+                </span>
+                <p class="bubble me mark">Je garde ce moment.</p>
+              </div>
+              <div class="phone-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <span>Rechercher « café »</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Reminds. All rights reserved.</p>
-      <p>
-        <a href="https://github.com/predator229/reminds" style="color: var(--primary);">GitHub</a> | 
-        <a href="mailto:plaisantin229@gmail.com" style="color: var(--primary);">Contact</a>
-      </p>
-    </footer>
-  </div>
+    <section class="section section-alt" id="fonctionnalites" aria-labelledby="titre-fonctionnalites">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Fonctionnalités</p>
+          <h2 id="titre-fonctionnalites">Des années de messages, enfin lisibles.</h2>
+          <p>L'export Facebook est un dossier de fichiers bruts. Reminds le range et le rend agréable à relire, comme un livre que l'on ouvre à n'importe quelle page.</p>
+        </div>
+        <ul class="features">
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></span>
+            <h3>Import de l'export Messenger</h3>
+            <p>Votre export Facebook (format JSON) devient une conversation complète, avec ses photos, GIF et audios.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <h3>Recherche</h3>
+            <p>Un mot suffit, même sans les accents. Chaque résultat ouvre le message à sa place dans le fil.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></span>
+            <h3>Photos et GIF</h3>
+            <p>Une galerie de tout ce qui a été partagé, avec un lien direct vers le moment de l'envoi.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></span>
+            <h3>Messages vocaux</h3>
+            <p>Les audios se réécoutent directement dans la conversation.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Calendrier</h3>
+            <p>Chaque jour échangé est marqué. Touchez une date et le fil s'ouvre à ce jour précis.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg></span>
+            <h3>Statistiques</h3>
+            <p>Qui écrit le plus, les mois les plus bavards, les heures préférées, la plus longue série de jours.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></span>
+            <h3>Ce jour-là</h3>
+            <p>Ce que vous vous écriviez à la même date, les années précédentes.</p>
+          </li>
+          <li class="feature">
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>Signets</h3>
+            <p>Gardez les messages qui comptent, avec une note. L'app retient aussi où vous vous étiez arrêté.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="confidentialite" aria-labelledby="titre-confidentialite">
+      <div class="wrap privacy">
+        <div class="section-head">
+          <p class="eyebrow">Confidentialité</p>
+          <h2 id="titre-confidentialite">Vos souvenirs restent les vôtres.</h2>
+          <p>Une conversation contient aussi les mots d'une autre personne. Reminds est pensé pour qu'elle ne sorte jamais du cercle de celles et ceux qui y ont été invités.</p>
+          <p><a href="/confidentialite.html">Lire la politique de confidentialité</a></p>
+        </div>
+        <ul class="checks">
+          <li>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
+            <div><strong>Sur invitation uniquement</strong><p>Pas d'inscription publique. Seules les adresses e-mail invitées peuvent se connecter, avec un code à 6 chiffres reçu par e-mail.</p></div>
+          </li>
+          <li>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+            <div><strong>Chiffré en transit</strong><p>Tout échange entre l'app et le serveur passe par HTTPS. Les photos et audios ne sont servis qu'avec une session valide, jamais par un lien public.</p></div>
+          </li>
+          <li>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg></span>
+            <div><strong>Hébergé en privé</strong><p>Les données sont sur un serveur administré par l'éditeur. Elles ne sont ni lues, ni analysées, ni revendues. Aucune publicité, aucun traceur.</p></div>
+          </li>
+          <li>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3H5a2 2 0 0 0-2 2v2M17 3h2a2 2 0 0 1 2 2v2M7 21H5a2 2 0 0 1-2-2v-2M17 21h2a2 2 0 0 0 2-2v-2"/><path d="M9 9v1M15 9v1M12 9v4h-1M9 16a4 4 0 0 0 6 0"/></svg></span>
+            <div><strong>Verrou Face ID</strong><p>L'app se verrouille et s'ouvre avec votre visage. La reconnaissance est faite par l'iPhone : rien ne quitte l'appareil.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="acces" aria-labelledby="titre-acces">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Accès</p>
+          <h2 id="titre-acces">Sur invitation, en trois étapes.</h2>
+          <p>Reminds n'est pas en libre accès. L'app iPhone est installée en privé pour l'instant ; elle n'est pas encore proposée sur l'App Store.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Demandez une invitation</h3>
+            <p>Écrivez à <a href="mailto:contact@cybersds.fr?subject=Invitation%20Reminds">contact@cybersds.fr</a> en expliquant votre besoin. Votre adresse e-mail est ajoutée à la liste des personnes invitées.</p>
+          </li>
+          <li>
+            <h3>Votre conversation est importée</h3>
+            <p>Vous téléchargez l'export de vos messages depuis Facebook. Il est importé sur le serveur privé, avec ses photos et audios.</p>
+          </li>
+          <li>
+            <h3>Connectez-vous sur l'iPhone</h3>
+            <p>Saisissez votre e-mail, puis le code reçu. Activez Face ID et relisez, même hors ligne pour ce que vous avez déjà ouvert.</p>
+          </li>
+        </ol>
+
+        <div class="cta" id="contact">
+          <h2>Une question, une invitation ?</h2>
+          <p>Reminds est édité par CyberShield Dev Solutions. Une seule adresse pour tout : nous répondons par e-mail.</p>
+          <a class="btn btn-primary" href="mailto:contact@cybersds.fr?subject=Reminds">Écrire à contact@cybersds.fr</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Reminds, édité par <a href="https://cybersds.fr">CyberShield Dev Solutions</a>, Parakou, Bénin.</p>
+      <nav aria-label="Informations légales">
+        <ul>
+          <li><a href="/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="/confidentialite.html">Confidentialité</a></li>
+          <li><a href="/conditions.html">Conditions</a></li>
+          <li><a href="mailto:contact@cybersds.fr">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
