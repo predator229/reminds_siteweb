@@ -25,6 +25,8 @@ python3 -m http.server 8765
 # puis http://localhost:8765/
 ```
 
+`app/` sur le serveur est l'app web Reminds (Flutter, dépôt `reminds`, `flutter build web`) : toujours l'exclure, sinon `--delete` l'efface.
+
 ## Déployer
 
 Le serveur et nginx sont gérés à part ; ici on copie seulement des fichiers statiques (pas de build,
@@ -34,7 +36,7 @@ pas de redémarrage) :
 rsync -av --delete \
   --exclude '.git*' --exclude '.github' --exclude '.DS_Store' \
   --exclude 'downloads' --exclude 'node_modules' \
-  --exclude 'README.md' --exclude 'LICENSE' \
+  --exclude 'README.md' --exclude 'LICENSE' --exclude 'app' \
   ./ root@82.112.241.241:/home/damien/cmpharma/reminds/site/
 ```
 
