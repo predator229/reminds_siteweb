@@ -225,6 +225,37 @@ p {
   color: var(--text);
 }
 
+.lang-switch {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.lang-switch:hover {
+  border-color: var(--accent);
+}
+
+.site-header .header-cta {
+  display: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .site-header .header-cta {
+    display: inline-flex;
+  }
+}
+
 .theme-toggle {
   display: inline-grid;
   place-items: center;
@@ -822,6 +853,7 @@ p {
 }
 
 .steps li {
+  position: relative;
   counter-increment: step;
   padding: 24px;
   border-radius: var(--radius);
@@ -851,6 +883,64 @@ p {
 .steps p {
   margin: 0;
   color: var(--muted);
+}
+
+.steps .badge {
+  position: absolute;
+  top: 30px;
+  right: 24px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.platforms {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .platforms {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.platforms li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.platforms strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.platforms p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9875rem;
+}
+
+.cta .cta-note {
+  margin: 16px auto 0;
+  font-size: 0.9375rem;
 }
 
 .cta {
@@ -1004,6 +1094,11 @@ p {
 
 .notfound .lead {
   margin: 0 auto 32px;
+}
+
+.notfound-actions {
+  justify-content: center;
+  margin: 0;
 }
 
 /* Hauteurs des barres des maquettes (sans style en ligne, compatible CSP) */
