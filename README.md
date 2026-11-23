@@ -10,8 +10,9 @@ Aucune étape de build : la racine du dépôt est le dossier à déployer.
 | `index.html` | Accueil : héros, fonctionnalités, confidentialité, accès (app web et iPhone, trois étapes), bouton « Ouvrir Reminds » vers `/app/` |
 | `mentions-legales.html`, `confidentialite.html`, `conditions.html` | Les trois pages légales |
 | `en/` | Version anglaise : `index.html`, `legal-notice.html`, `privacy.html`, `terms.html` (même structure, liens hreflang croisés, bouton FR/EN dans l'en-tête) |
+| `guide-export-facebook.html`, `en/facebook-export-guide.html` | Guide pas à pas pour récupérer l'export Facebook (ordinateur, iPhone, discussions chiffrées), captures dans `images/guide/{fr,en}/` (WebP, anonymisées), agrandissement par `guide.js` |
 | `404.html` | Page d'erreur (chemins absolus, servie depuis n'importe quelle profondeur) |
-| `styles.css`, `theme.js` | Seule feuille de style ; seul script (thème clair/sombre, mémorisé dans le navigateur) |
+| `styles.css`, `theme.js` | Seule feuille de style ; script du thème clair/sombre (mémorisé dans le navigateur). `guide.js` : agrandissement des captures du guide |
 | `images/` | Icônes (favicon, apple-touch, manifest) et images Open Graph 1200x630 (`og-image.png` FR, `og-image-en.png` EN) |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.ico` | Référencement et icônes |
 | `.well-known/security.txt` (copie à la racine) | Contact sécurité (RFC 9116), expire le 04/11/2027 : à renouveler |

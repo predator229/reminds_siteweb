@@ -1182,3 +1182,216 @@ p {
 .wave i:nth-child(10) { height: 8px; }
 .wave i:nth-child(11) { height: 15px; }
 .wave i:nth-child(12) { height: 7px; }
+
+/* Guide d'export Facebook */
+
+.guide .lead {
+  margin-bottom: 8px;
+}
+
+.guide section {
+  margin-top: 48px;
+}
+
+.guide h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.guide h2 .badge {
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+.guide-checklist {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 20px 20px 20px 40px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.guide-checklist li::marker {
+  color: var(--accent);
+}
+
+.guide-steps {
+  display: grid;
+  gap: 40px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: guide-step;
+}
+
+.guide-steps li {
+  counter-increment: guide-step;
+}
+
+.guide-steps h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.guide-steps h3::before {
+  content: counter(guide-step);
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.9375rem;
+}
+
+.guide-steps p {
+  margin: 0;
+  padding-left: 44px;
+  color: var(--muted);
+}
+
+.guide .actions {
+  margin-top: 32px;
+}
+
+.shot {
+  margin: 16px 0 0 44px;
+}
+
+.shot a {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 12px;
+  cursor: zoom-in;
+  vertical-align: top;
+}
+
+.shot-desktop a {
+  display: block;
+}
+
+/* Largeur fixée en CSS : une image en chargement différé garde sa place (ratio des attributs width/height). */
+.shot img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.shot-desktop img {
+  width: 100%;
+}
+
+.shot-mobile img {
+  width: 300px;
+}
+
+.shot-medium img {
+  width: 480px;
+}
+
+.shot figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 559px) {
+  .guide-steps p,
+  .shot {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+.lightbox {
+  max-width: 96vw;
+  max-height: 96vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(10, 8, 7, 0.88);
+}
+
+.lightbox img {
+  display: block;
+  max-width: 96vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.lightbox-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.guide-toc ul {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-toc a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.guide-toc a:hover {
+  border-color: var(--accent);
+}
+
+.guide aside {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .guide-toc {
+    display: none;
+  }
+
+  .guide aside {
+    display: block;
+  }
+}
