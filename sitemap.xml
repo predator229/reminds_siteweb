@@ -56,4 +56,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/conditions.html"/>
   </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/guide-export-facebook.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/guide-export-facebook.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/facebook-export-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/guide-export-facebook.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/en/facebook-export-guide.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/guide-export-facebook.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/facebook-export-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/guide-export-facebook.html"/>
+  </url>
 </urlset>
