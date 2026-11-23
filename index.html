@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reminds : relire vos conversations Messenger, en privé</title>
-  <meta name="description" content="Reminds, sur iPhone et sur le web, pour relire vos conversations Messenger en privé : recherche, photos, audios, calendrier, statistiques et « Ce jour-là ».">
+  <meta name="description" content="Reminds, sur iPhone et sur le web, pour relire vos conversations Messenger en privé : recherche, photos, audios, calendrier, statistiques et « Ce jour-là ». Accès sur validation.">
   <link rel="canonical" href="https://reminds.cybersds.fr/">
   <link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/">
   <link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/">
@@ -20,7 +20,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Reminds">
   <meta property="og:title" content="Reminds : relire vos conversations, en privé">
-  <meta property="og:description" content="Relisez vos conversations Messenger en privé, sur iPhone et sur le web.">
+  <meta property="og:description" content="Relisez vos conversations Messenger en privé, sur iPhone et sur le web. Accès sur validation.">
   <meta property="og:url" content="https://reminds.cybersds.fr/">
   <meta property="og:image" content="https://reminds.cybersds.fr/images/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -46,7 +46,7 @@
           <li><a href="#acces">Accès</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="/app/">Ouvrir Reminds</a>
+      <a class="btn btn-primary btn-small header-cta" href="/app/?request=1">Demander un accès</a>
       <a class="lang-switch" href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Thème sombre">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -62,10 +62,11 @@
           <p class="eyebrow">Sur iPhone et sur le web, en privé</p>
           <h1 id="titre">Relisez vos conversations, en toute intimité.</h1>
           <p class="lead">Reminds transforme l'export de vos discussions Messenger en un fil clair, que l'on parcourt et que l'on fouille : messages, photos, audios, dates et souvenirs. Pour vous, et pour la personne avec qui vous la partagez.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/app/">Ouvrir Reminds</a>
-            <a class="btn btn-secondary" href="#fonctionnalites">Voir les fonctionnalités</a>
+          <div class="actions">
+            <a class="btn btn-primary" href="/app/?request=1">Demander un accès</a>
+            <a class="btn btn-secondary" href="/app/">Ouvrir Reminds</a>
           </div>
+          <p class="text-link-row"><a class="text-link" href="#fonctionnalites">Voir les fonctionnalités<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
           <ul class="hero-note">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>iPhone et web installable</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Chiffré en transit</li>
@@ -193,7 +194,7 @@
         <ul class="checks">
           <li>
             <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
-            <div><strong>Sur invitation</strong><p>Pas d'inscription publique : on entre dans Reminds parce qu'une conversation vous a été partagée. Connexion avec un code à 6 chiffres reçu par e-mail, ou avec votre compte Google.</p></div>
+            <div><strong>Accès sur validation</strong><p>Pas d'inscription libre : vous demandez un accès dans l'app et l'éditeur le valide, ou une personne vous partage une conversation. Connexion avec un code à 6 chiffres reçu par e-mail, ou avec votre compte Google.</p></div>
           </li>
           <li>
             <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
@@ -216,7 +217,7 @@
         <div class="section-head">
           <p class="eyebrow">Accès</p>
           <h2 id="titre-acces">Sur iPhone et sur le web, en trois étapes.</h2>
-          <p>Reminds s'ouvre dans votre navigateur ou sur iPhone. Le même compte, les mêmes conversations, où que vous soyez.</p>
+          <p>Accès sur validation : vous demandez un accès dans l'app, l'éditeur le valide et vous prévient par e-mail. Ou une personne vous partage directement une conversation. Ensuite, le même compte sur le web et sur iPhone.</p>
         </div>
         <ul class="platforms">
           <li>
@@ -230,13 +231,13 @@
         </ul>
         <ol class="steps">
           <li>
-            <h3>Récupérez votre export Facebook</h3>
-            <p>Dans les paramètres de Facebook, téléchargez vos informations, rubrique Messages, au format JSON. Facebook vous envoie un fichier zip.</p>
+            <h3>Demandez un accès</h3>
+            <p>Dans l'app, indiquez votre adresse e-mail, votre nom et, si vous le souhaitez, un message. L'éditeur valide la demande et vous prévient par e-mail.</p>
           </li>
           <li>
             <span class="badge">Bientôt disponible</span>
-            <h3>Importez-le dans Reminds</h3>
-            <p>Envoyez le zip depuis l'app web ou l'iPhone et choisissez vos conversations : Reminds les range, avec photos, GIF et audios. L'import est en dernière phase de tests.</p>
+            <h3>Importez votre export Facebook</h3>
+            <p>Téléchargez vos informations Facebook (rubrique Messages, format JSON), puis envoyez le zip depuis l'app web ou l'iPhone. L'import est en dernière phase de tests.</p>
           </li>
           <li>
             <h3>Partagez avec l'autre personne</h3>
@@ -245,10 +246,12 @@
         </ol>
 
         <div class="cta" id="ouvrir">
-          <h2>Vous avez reçu une invitation ?</h2>
-          <p>Ouvrez Reminds avec cette adresse, puis connectez-vous avec le code reçu par e-mail ou avec Google.</p>
-          <a class="btn btn-primary" href="/app/">Ouvrir Reminds</a>
-          <p class="cta-note">L'inscription libre n'est pas encore ouverte : pour l'instant, on entre dans Reminds quand quelqu'un vous partage une conversation.</p>
+          <h2>Prêt à relire vos conversations ?</h2>
+          <p>Demandez un accès en une minute depuis l'app. Vous avez déjà accès, ou quelqu'un vous a partagé une conversation ? Ouvrez Reminds avec cette adresse : code par e-mail ou Google.</p>
+          <div class="actions actions-center">
+            <a class="btn btn-primary" href="/app/?request=1">Demander un accès</a>
+            <a class="btn btn-secondary" href="/app/">Ouvrir Reminds</a>
+          </div>
         </div>
       </div>
     </section>

@@ -307,6 +307,9 @@ p {
   border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
   text-decoration: none;
   border: 1px solid transparent;
   transition: transform 0.15s ease, background-color 0.15s ease;
@@ -336,9 +339,74 @@ p {
 }
 
 .btn-small {
+  height: 44px;
   min-height: 44px;
-  padding: 8px 16px;
+  padding: 0 18px;
   font-size: 0.9375rem;
+}
+
+/* Groupes de boutons : empilés pleine largeur et de même taille sur téléphone,
+   côte à côte (largeur du contenu) dès qu'il y a la place. */
+
+.actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin: 32px 0 0;
+}
+
+.actions .btn {
+  width: 100%;
+}
+
+@media (min-width: 560px) {
+  .actions {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-columns: none;
+    gap: 16px;
+    width: max-content;
+    max-width: 100%;
+  }
+}
+
+.actions-center {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 560px) {
+  .actions-center {
+    max-width: 100%;
+  }
+}
+
+.cta .actions {
+  margin-top: 0;
+}
+
+.text-link-row {
+  margin: 12px 0 24px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-link svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
 }
 
 /* Héros */
@@ -378,13 +446,6 @@ p {
   font-size: 1.1875rem;
   color: var(--muted);
   max-width: 34em;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 32px 0 24px;
 }
 
 .hero-note {
@@ -938,11 +999,6 @@ p {
   font-size: 0.9875rem;
 }
 
-.cta .cta-note {
-  margin: 16px auto 0;
-  font-size: 0.9375rem;
-}
-
 .cta {
   margin-top: 40px;
   padding: 40px 24px;
@@ -1093,12 +1149,12 @@ p {
 }
 
 .notfound .lead {
-  margin: 0 auto 32px;
+  margin: 0 auto;
+  text-wrap: balance;
 }
 
-.notfound-actions {
-  justify-content: center;
-  margin: 0;
+.notfound .wrap {
+  max-width: 640px;
 }
 
 /* Hauteurs des barres des maquettes (sans style en ligne, compatible CSP) */
