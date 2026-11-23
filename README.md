@@ -7,13 +7,17 @@ Aucune étape de build : la racine du dépôt est le dossier à déployer.
 
 | Fichier | Rôle |
 | --- | --- |
-| `index.html` | Accueil : héros, fonctionnalités, confidentialité, accès sur invitation, contact |
+| `index.html` | Accueil : héros, fonctionnalités, confidentialité, accès (app web et iPhone, trois étapes), bouton « Ouvrir Reminds » vers `/app/` |
 | `mentions-legales.html`, `confidentialite.html`, `conditions.html` | Les trois pages légales |
+| `en/` | Version anglaise : `index.html`, `legal-notice.html`, `privacy.html`, `terms.html` (même structure, liens hreflang croisés, bouton FR/EN dans l'en-tête) |
 | `404.html` | Page d'erreur (chemins absolus, servie depuis n'importe quelle profondeur) |
 | `styles.css`, `theme.js` | Seule feuille de style ; seul script (thème clair/sombre, mémorisé dans le navigateur) |
-| `images/` | Icônes (favicon, apple-touch, manifest) et image Open Graph 1200x630 |
+| `images/` | Icônes (favicon, apple-touch, manifest) et images Open Graph 1200x630 (`og-image.png` FR, `og-image-en.png` EN) |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.ico` | Référencement et icônes |
 | `.well-known/security.txt` (copie à la racine) | Contact sécurité (RFC 9116), expire le 04/11/2027 : à renouveler |
+
+Le site existe en français (référence) et en anglais : toute modification de texte se fait dans les deux langues.
+Aucun lien mailto comme bouton d'action : l'utilisateur fait tout lui-même dans l'app ; contact@cybersds.fr reste en pied de page et dans les pages légales.
 
 Les maquettes d'iPhone sont dessinées en HTML/CSS avec un contenu fictif. Aucune vraie conversation,
 aucun vrai nom ne doit apparaître sur ce site.
