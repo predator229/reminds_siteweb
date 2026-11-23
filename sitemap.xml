@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://reminds.cybersds.fr/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/en/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/mentions-legales.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/mentions-legales.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/en/legal-notice.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/mentions-legales.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/confidentialite.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/en/privacy.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/conditions.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/conditions.html"/>
+  </url>
+  <url>
+    <loc>https://reminds.cybersds.fr/en/terms.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reminds.cybersds.fr/conditions.html"/>
+  </url>
+</urlset>
