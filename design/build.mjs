@@ -32,13 +32,10 @@ function hoistStyles(html) {
 }
 
 const PAGES = { home, guide, mentions: legal('mentions'), privacy: legal('privacy'), terms: legal('terms') };
-const written = [];
-function write(rel, html) {
-  const out = path.join(root, rel);
-  fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, hoistStyles(html));
-  written.push(rel);
-}
+// Pages gardées en mémoire : écrites après theme.css, pour porter l'empreinte de chaque feuille et script
+// (?v=…) : le serveur garde .css et .js en cache 7 jours, une nouvelle page ne doit pas tomber sur une ancienne feuille.
+const pages = new Map();
+function write(rel, html) { pages.set(rel, hoistStyles(html)); }
 for (const [key, fn] of Object.entries(PAGES)) for (const lang of ['fr', 'en']) {
   const c = ctx(lang, key);
   const html = keepWords(page(c, fn(c)));
@@ -63,10 +60,17 @@ const css = toCss(tokens).replaceAll('url(fonts/', 'url(/fonts/') + landingCss(t
   `\n/* Recadrages et positions (générés par design/build.mjs depuis les pages). */\n${vars}\n`;
 fs.writeFileSync(path.join(root, 'theme.css'), css);
 
+const stamp = (f) => crypto.createHash('sha1').update(fs.readFileSync(path.join(root, f))).digest('hex').slice(0, 10);
+for (const [rel, html] of pages) {
+  const out = path.join(root, rel);
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, html.replace(/@v:([a-z.]+)/g, (m, f) => stamp(f)));
+}
+
 const manifestFile = path.join(root, 'site.webmanifest');
 const manifest = fs.readFileSync(manifestFile, 'utf8')
   .replace(/("background_color": )"[^"]*"/, `$1"${tokens.color.light.paper}"`)
   .replace(/("theme_color": )"[^"]*"/, `$1"${tokens.color.light.brand}"`);
 fs.writeFileSync(manifestFile, manifest);
 
-console.log(`theme.css + site.webmanifest + ${written.length} pages : ${written.join(', ')}`);
+console.log(`theme.css + site.webmanifest + ${pages.size} pages : ${[...pages.keys()].join(', ')}`);

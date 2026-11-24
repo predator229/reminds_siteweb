@@ -163,9 +163,9 @@ export function page(c, { title, description, body, bodyClass = '' }) {
 ${seoHead(c)}
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="${TOKENS.color.light.paper}">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="${TOKENS.color.dark.paper}">
-<script src="${P}site.js"></script>
-<link rel="stylesheet" href="${P}theme.css">
-<link rel="stylesheet" href="${P}styles.css">
+<script src="${P}site.js?v=@v:site.js"></script>
+<link rel="stylesheet" href="${P}theme.css?v=@v:theme.css">
+<link rel="stylesheet" href="${P}styles.css?v=@v:styles.css">
 </head>
 <body class="${bodyClass}">
 ${SPRITE}

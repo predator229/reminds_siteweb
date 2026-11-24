@@ -30,6 +30,9 @@ const PAGES = {
   'guide-fr': '/guide-export-facebook.html', 'guide-en': '/en/facebook-export-guide.html',
   'legal-fr': '/mentions-legales.html', 'legal-en': '/en/legal-notice.html',
   '404': '/404.html',
+  // Pas de rendu maquette (même gabarit que legal-*) : contrôles seulement.
+  'privacy-fr': '/confidentialite.html', 'privacy-en': '/en/privacy.html',
+  'terms-fr': '/conditions.html', 'terms-en': '/en/terms.html',
 };
 const VIEWS = { desktop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 } };
 const only = process.argv.slice(2);
@@ -123,6 +126,27 @@ if (!only.length || only.includes('404')) {
   await fullShot(page, path.join(out, 'site', '404-deep-phone-light.png'), 390, 2);
   try { execFileSync('magick', ['compare', '-metric', 'AE', path.join(out, 'site', '404-phone-light.png'), path.join(out, 'site', '404-deep-phone-light.png'), 'null:'], { stdio: 'pipe' }); report.push('404 profonde = /404.html : 0 px'); }
   catch (e) { report.push(`404 profonde vs /404.html : ${e.stderr}`); }
+  await ctx.close();
+}
+// CSP de production (en-tête du serveur réel) : aucun refus, rendu identique au rendu sans CSP.
+const CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
+if (!only.length) for (const [name, url] of [['accueil-fr', '/'], ['guide-en', '/en/facebook-export-guide.html']]) {
+  const ctx = await browser.newContext({ viewport: VIEWS.desktop, deviceScaleFactor: 1 });
+  const page = await ctx.newPage();
+  const refused = [];
+  page.on('console', (m) => { if (/Content Security Policy|Refused/i.test(m.text())) refused.push(m.text()); });
+  await page.route((u) => u.pathname === url, async (route) => {
+    const res = await route.fetch();
+    await route.fulfill({ response: res, headers: { ...res.headers(), 'content-security-policy': CSP } });
+  });
+  await page.goto(`${BASE}${url}?theme=light`);
+  await settle(page);
+  const file = path.join(out, 'site', `${name}-desktop-light-csp.png`);
+  await fullShot(page, file, 1440, 1);
+  let ae = '0';
+  try { execFileSync('magick', ['compare', '-metric', 'AE', path.join(out, 'site', `${name}-desktop-light.png`), file, 'null:'], { stdio: 'pipe' }); }
+  catch (e) { ae = String(e.stderr); }
+  report.push(`CSP de production ${name} : ${refused.length ? 'REFUS ' + JSON.stringify(refused.slice(0, 2)) : 'aucun refus'}, écart au rendu sans CSP ${ae} px`);
   await ctx.close();
 }
 await browser.close();

@@ -1,34 +1,52 @@
 Référence : maquette d2bdb9d
 404-desktop-light.png: 0 px différents (0.000 %)
 accueil-fr-desktop-light.png: 24.7216 px différents (0.000 %)
-accueil-en-desktop-light.png: 31.3399 px différents (0.000 %)
+accueil-en-desktop-light.png: 2236.12 px différents (0.018 %)
 guide-fr-desktop-light.png: 0 px différents (0.000 %)
-guide-en-desktop-light.png: 14491.3 px différents (0.035 %)
+guide-en-desktop-light.png: 0 px différents (0.000 %)
 legal-fr-desktop-light.png: 0 px différents (0.000 %)
 legal-en-desktop-light.png: 0 px différents (0.000 %)
+privacy-fr-desktop-light.png: pas de rendu maquette
+privacy-en-desktop-light.png: pas de rendu maquette
+terms-fr-desktop-light.png: pas de rendu maquette
+terms-en-desktop-light.png: pas de rendu maquette
 404-phone-light.png: 0 px différents (0.000 %)
-accueil-fr-phone-light.png: 426.265 px différents (0.002 %)
+accueil-fr-phone-light.png: 438.651 px différents (0.002 %)
 accueil-fr-phone-light-menu.png: 0 px différents (0.000 %)
 accueil-en-phone-light.png: 0 px différents (0.000 %)
 guide-fr-phone-light.png: 0 px différents (0.000 %)
 guide-en-phone-light.png: 411.722 px différents (0.004 %)
 legal-fr-phone-light.png: 0 px différents (0.000 %)
 legal-en-phone-light.png: 0 px différents (0.000 %)
+privacy-fr-phone-light.png: pas de rendu maquette
+privacy-en-phone-light.png: pas de rendu maquette
+terms-fr-phone-light.png: pas de rendu maquette
+terms-en-phone-light.png: pas de rendu maquette
 404-desktop-dark.png: 0 px différents (0.000 %)
 accueil-fr-desktop-dark.png: 21.2758 px différents (0.000 %)
-accueil-en-desktop-dark.png: 0 px différents (0.000 %)
+accueil-en-desktop-dark.png: 1999.91 px différents (0.016 %)
 guide-fr-desktop-dark.png: 0 px différents (0.000 %)
 guide-en-desktop-dark.png: 0 px différents (0.000 %)
 legal-fr-desktop-dark.png: 0 px différents (0.000 %)
 legal-en-desktop-dark.png: 0 px différents (0.000 %)
+privacy-fr-desktop-dark.png: pas de rendu maquette
+privacy-en-desktop-dark.png: pas de rendu maquette
+terms-fr-desktop-dark.png: pas de rendu maquette
+terms-en-desktop-dark.png: pas de rendu maquette
 404-phone-dark.png: 0 px différents (0.000 %)
 accueil-fr-phone-dark.png: 0 px différents (0.000 %)
 accueil-fr-phone-dark-menu.png: 0 px différents (0.000 %)
 accueil-en-phone-dark.png: 0 px différents (0.000 %)
-guide-fr-phone-dark.png: 18.766 px différents (0.000 %)
-guide-en-phone-dark.png: 0 px différents (0.000 %)
+guide-fr-phone-dark.png: 21.3529 px différents (0.000 %)
+guide-en-phone-dark.png: 3385.08 px différents (0.033 %)
 legal-fr-phone-dark.png: 0 px différents (0.000 %)
 legal-en-phone-dark.png: 0 px différents (0.000 %)
+privacy-fr-phone-dark.png: pas de rendu maquette
+privacy-en-phone-dark.png: pas de rendu maquette
+terms-fr-phone-dark.png: pas de rendu maquette
+terms-en-phone-dark.png: pas de rendu maquette
 404 profonde = /404.html : 0 px
+CSP de production accueil-fr : aucun refus, écart au rendu sans CSP 0 px
+CSP de production guide-en : aucun refus, écart au rendu sans CSP 65.6837 (1.59455e-06) px
 
 Aucun problème (débordement, images, JS, 4xx, tiret cadratin, français en EN)
