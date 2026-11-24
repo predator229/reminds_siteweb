@@ -307,16 +307,45 @@
   --bubble-mine: #3f3f46;
 }
 
+/* Site vitrine : section landing de tokens.json. */
+:root {
+  --l-wrap: 1200px;
+  --l-section: 96px;
+  --l-fw-hero: 800;
+  --l-fs-hero: 56px;
+  --l-lh-hero: 1.05;
+  --l-tr-hero: -0.032em;
+  --l-fw-h2: 700;
+  --l-fs-h2: 36px;
+  --l-lh-h2: 1.15;
+  --l-tr-h2: -0.02em;
+  --l-fw-h3: 700;
+  --l-fs-h3: 24px;
+  --l-lh-h3: 1.3;
+  --l-tr-h3: -0.01em;
+  --l-fw-lead: 500;
+  --l-fs-lead: 18px;
+  --l-lh-lead: 1.6;
+  --l-tr-lead: 0em;
+  --l-fw-body: 500;
+  --l-fs-body: 15px;
+  --l-lh-body: 1.6;
+  --l-tr-body: 0em;
+  --l-r-device: 42px;
+  --l-phone-w: 280px;
+}
+@media (max-width: 720px) { :root { --l-section: 72px; --l-fs-hero: 36px; --l-fs-h2: 28px; --l-fs-h3: 20px; --l-fs-lead: 16px; --l-fs-body: 15px; } }
+
 /* Recadrages et positions (générés par design/build.mjs depuis les pages). */
 .v-03257fa7 { --at:41.18%; }
 .v-0d1c59d2 { --at:94.12%; }
 .v-1158bd6f { --at:70.59%; }
 .v-13f0fd1d { --at:88.24%; }
+.v-14006aad { --x:0;--y:0;--w:1440;--h:780; }
 .v-2aa2fd3c { --at:5.88%; }
 .v-2d1b31d9 { --x:0;--y:0;--w:390;--h:844; }
 .v-3f40014b { --x:500;--y:64;--w:940;--h:720; }
 .v-4ad5fa07 { --at:11.76%; }
-.v-4e0dbbe6 { --x:0;--y:0;--w:1440;--h:820; }
 .v-4ff80600 { --at:64.71%; }
 .v-54c69f1d { --at:23.53%; }
 .v-603a71b7 { --x:232;--y:112;--w:955;--h:700; }

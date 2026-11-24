@@ -1,29 +1,11 @@
 /* Reminds, site vitrine (maquette). AUCUNE valeur de thème ici : couleurs, police, tailles de texte,
-   rayons, ombres et durées viennent de theme.css, généré depuis ../tokens.json par build.mjs.
-   Le bloc ci-dessous dérive l'échelle « vitrine » (titres plus grands, sections plus aérées) des jetons
-   existants ; à terme il peut devenir une section `landing` de tokens.json, comme `email`. */
+   interlignes, rayons, ombres, durées, largeur du contenu et échelle des grands titres viennent de theme.css,
+   généré depuis ../tokens.json (sections color, type, layout et landing) par build.mjs.
+   Les points de rupture des @media (719 / 959) reprennent layout.phoneMax et landing.tabletMax :
+   une variable CSS ne peut pas servir dans une requête média. */
 :root {
-  --l-wrap: 1200px;
   --l-pad: var(--page-gutter); /* layout.gutter de tokens.json : 32, 24 en tablette, 16 sur téléphone */
-  --l-section: calc(var(--s6) * 2);
-  --l-fs-hero: calc(var(--fs-display) * 2);
-  --l-fs-h2: calc(var(--fs-title) * 1.8);
-  --l-fs-h3: calc(var(--fs-title) * 1.2);
-  --l-fs-lead: var(--fs-titleSm);
-  --l-fs-body: var(--fs-reading);
-  --l-tr-hero: calc(var(--tr-display) * 1.6);
-  --l-r-device: calc(var(--r-lg) * 3);
-  --l-r-screen: calc(var(--r-lg) * 3 - var(--s2));
-  --l-phone-w: 280px;
-}
-@media (max-width: 719px) {
-  :root {
-    --l-section: calc(var(--s6) + var(--s4));
-    --l-fs-hero: calc(var(--fs-display) + var(--s2));
-    --l-fs-h2: var(--fs-display);
-    --l-fs-h3: var(--fs-title);
-    --l-fs-lead: calc(var(--fs-body) * 8 / 7);
-  }
+  --l-r-screen: calc(var(--l-r-device) - var(--s2));
 }
 
 /* ---------- Base ---------- */
@@ -32,7 +14,7 @@ html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--h-tab) + v
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body {
   margin: 0; background: var(--paper); color: var(--ink);
-  font: var(--t-body); font-size: var(--l-fs-body); line-height: 1.6;
+  font: var(--t-body); font-weight: var(--l-fw-body); font-size: var(--l-fs-body); line-height: var(--l-lh-body);
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
 h1, h2, h3, p, ol, ul, dl, dd, figure { margin: 0; }
@@ -56,11 +38,11 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .top__menu[aria-expanded='true'] .only-closed, .top__menu:not([aria-expanded='true']) .only-open { display: none; }
 
 /* ---------- Texte ---------- */
-.h-hero { font-weight: 800; font-size: var(--l-fs-hero); line-height: 1.05; letter-spacing: var(--l-tr-hero); text-wrap: balance; }
-.h2 { font-weight: 700; font-size: var(--l-fs-h2); line-height: 1.15; letter-spacing: var(--tr-display); text-wrap: balance; }
+.h-hero { font-weight: var(--l-fw-hero); font-size: var(--l-fs-hero); line-height: var(--l-lh-hero); letter-spacing: var(--l-tr-hero); text-wrap: balance; }
+.h2 { font-weight: var(--l-fw-h2); font-size: var(--l-fs-h2); line-height: var(--l-lh-h2); letter-spacing: var(--l-tr-h2); text-wrap: balance; }
 .h3 { font-weight: 700; font-size: var(--fs-titleSm); line-height: 1.35; letter-spacing: var(--tr-titleSm); }
-.h3--lg { font-size: var(--l-fs-h3); letter-spacing: var(--tr-title); line-height: 1.3; }
-.lead { font-size: var(--l-fs-lead); line-height: 1.6; color: var(--ink-2); max-width: 38em; }
+.h3--lg { font-weight: var(--l-fw-h3); font-size: var(--l-fs-h3); letter-spacing: var(--l-tr-h3); line-height: var(--l-lh-h3); }
+.lead { font-weight: var(--l-fw-lead); font-size: var(--l-fs-lead); line-height: var(--l-lh-lead); color: var(--ink-2); max-width: 38em; }
 .meta { font: var(--t-meta); color: var(--ink-3); }
 .hint { font: var(--t-meta); font-size: var(--fs-small); line-height: 1.5; color: var(--ink-3); max-width: 34em; }
 .link { display: inline-flex; align-items: center; gap: var(--s1); color: var(--ember-text); font-weight: 650; }
@@ -304,7 +286,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .prose > * + * { margin-top: var(--s3); }
 .prose .lead { margin-top: 0; }
 .prose section { margin-top: var(--s6); }
-.prose h2 { font-weight: 700; font-size: var(--l-fs-h3); line-height: 1.3; letter-spacing: var(--tr-title); margin-top: var(--s5); }
+.prose h2 { font-weight: var(--l-fw-h3); font-size: var(--l-fs-h3); line-height: var(--l-lh-h3); letter-spacing: var(--l-tr-h3); margin-top: var(--s5); }
 .prose section > h2 { margin-top: 0; }
 .prose h2 + * { margin-top: var(--s3); }
 .prose p, .prose li { color: var(--ink-2); }

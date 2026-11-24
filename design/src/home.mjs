@@ -39,7 +39,7 @@ function hero(c) {
   </div>
   ${frise(c)}
   <div class="stage">
-    ${browser(c, 'home-desktop', { y: 0, h: 820, alt: t('L’accueil de Reminds : souvenirs « Ce jour-là », conversations lues récemment et chiffres de l’archive', 'The Reminds home screen: “On this day” memories, recently read conversations and archive figures') })}
+    ${browser(c, 'home-user-desktop', { y: 0, h: 780, alt: t('L’accueil de Reminds : souvenirs « Ce jour-là », conversations lues récemment et chiffres de l’archive', 'The Reminds home screen: “On this day” memories, recently read conversations and archive figures') })}
     ${phone(c, 'conversations-phone', { h: 844, cls: 'stage__phone', alt: t('La liste des conversations sur iPhone, chacune avec sa période sur une frise', 'The conversation list on iPhone, each with its period on a timeline') })}
   </div>
 </div></section>`;
@@ -71,7 +71,7 @@ function features(c) {
   </article>`;
   const both = (desk, ph) => `<div class="only-desk">${desk}</div><div class="only-phone">${ph}</div>`;
   const rows = [
-    row({ id: 'f-import', title: t('Des milliers de fils, triés d’un coup d’œil', 'Thousands of threads, sorted at a glance'),
+    row({ id: 'f-import', title: t('Des milliers de fils, triés d’un coup d’œil', 'Thousands of threads, sorted at a glance') + (IMPORT_LIVE ? '' : ` <span class="badge">${t('Bientôt disponible', 'Coming soon')}</span>`),
       text: t('L’export Facebook est un dossier de fichiers bruts. Reminds en fait une liste claire : chaque conversation, sa période sur une frise, son nombre de messages et de médias.', 'A Facebook export is a folder of raw files. Reminds turns it into a clear list: each conversation, its period on a timeline, its number of messages and media.'),
       list: [t('Les comptes supprimés et les fils d’un seul message sont écartés d’office', 'Deleted accounts and one-message threads are left out by default'), t('Plusieurs zips : Reminds ajoute ce qui manque, sans rien effacer', 'Several zips: Reminds adds what is missing, without erasing anything'), t('Vous gardez seulement ce que vous cochez', 'You keep only what you tick')],
       visual: both(browser(c, 'import-select-desktop', { x: 548, y: 120, w: 880, h: 620, alt: t('Choix des conversations à importer', 'Choosing the conversations to import') }), phone(c, 'import-select-phone', { h: 700 })) }),

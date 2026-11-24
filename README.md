@@ -23,7 +23,7 @@ l'import est encore fermé en prod ; le drapeau est `IMPORT_LIVE` dans `design/s
 | `guide-export-facebook.html`, `en/facebook-export-guide.html` | Guide pas à pas de l'export Facebook, captures dans `images/guide/{fr,en}/` (WebP, anonymisées) |
 | `mentions-legales.html`, `confidentialite.html`, `conditions.html` (+ `en/legal-notice.html`, `en/privacy.html`, `en/terms.html`) | Les trois pages légales, un seul gabarit |
 | `404.html` | Page d'erreur (chemins absolus, servie depuis n'importe quelle profondeur) |
-| `theme.css` | **Généré** : variables du thème (jetons), polices Manrope, recadrages des captures |
+| `theme.css` | **Généré** : variables du thème (jetons), échelle du site vitrine `--l-*` (section `landing` de `tokens.json`), polices Manrope, recadrages des captures |
 | `styles.css` | Toute la mise en forme, uniquement des `var(--…)` de `theme.css` |
 | `site.js` | Thème clair/sombre (système par défaut, choix gardé dans le navigateur, `?theme=dark`) et menu du téléphone |
 | `fonts/` | Manrope (latin, 400 à 800, woff2) |
@@ -45,10 +45,10 @@ commit dans `design/SOURCE`, lancer `node design/build.mjs` puis `node design/li
 ### Comparer aux maquettes
 
 ```sh
-python3 -m http.server 8771 &              # depuis la racine
-REMINDS_IMPORT_LIVE=1 node design/build.mjs   # les maquettes montrent l'import ouvert
-node design/render.mjs                      # design/compare/ : rendus, côte à côte, écarts (non versionnés)
-node design/build.mjs                       # revenir à l'état par défaut avant de committer
+python3 -m http.server 8771 &   # depuis la racine
+node design/build.mjs
+node design/render.mjs           # rendus de la maquette au commit de design/SOURCE, rendus du site,
+                                 # côte à côte et écarts dans design/compare/ (PNG non versionnés, report.txt versionné)
 ```
 
 Le site existe en français (référence) et en anglais : toute modification de texte se fait dans les deux langues.

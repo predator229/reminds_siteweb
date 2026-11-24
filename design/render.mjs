@@ -2,7 +2,7 @@
 // mêmes pages, tailles, thèmes et menu du téléphone que render.mjs des maquettes, puis côte à côte
 // (maquette | site) et écart en pixels (ImageMagick compare -metric AE). Chrome headless uniquement.
 // Prérequis : la racine servie en local (python3 -m http.server 8771) ; Playwright de reminds-web-redesign.
-// Usage : REMINDS_IMPORT_LIVE=1 node design/build.mjs && node design/render.mjs [page ...]
+// Usage : node design/build.mjs && node design/render.mjs [page ...]
 // Sorties (non versionnées) : design/compare/{site,sbs,diff}/, design/compare/report.txt
 import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';

@@ -1,5 +1,6 @@
 // Construit le site vitrine à la racine du dépôt (le dossier déployé) :
-//  1. theme.css, généré depuis design/tokens.json (source unique du thème, la même que l'app web et iOS),
+//  1. theme.css, généré depuis design/tokens.json (source unique du thème, la même que l'app web et iOS,
+//     section `landing` comprise : variables --l-*),
 //     suivi des variables de recadrage des captures (la CSP interdit les attributs style="") ;
 //  2. les 11 pages HTML FR et EN ;
 //  3. les couleurs de site.webmanifest (jetons paper et brand).
@@ -48,8 +49,17 @@ for (const [key, fn] of Object.entries(PAGES)) for (const lang of ['fr', 'en']) 
   write('404.html', frenchSpacing(keepWords(page(c, notFound(c)))));
 }
 
+// Échelle du site vitrine (section `landing` de tokens.json) en variables --l-* (même code que la maquette).
+export function landingCss(t) {
+  const L = t.landing; const px = (n) => `${n}px`;
+  const type = Object.entries(L.type).map(([k, v]) => `  --l-fw-${k}: ${v.weight};\n  --l-fs-${k}: ${px(v.size)};\n  --l-lh-${k}: ${v.line};\n  --l-tr-${k}: ${v.tracking}em;`).join('\n');
+  const phone = Object.entries(L.type).map(([k, v]) => `--l-fs-${k}: ${px(v.sizePhone ?? v.size)};`).join(' ');
+  return `\n/* Site vitrine : section landing de tokens.json. */\n:root {\n  --l-wrap: ${px(L.wrap)};\n  --l-section: ${px(L.section)};\n${type}\n  --l-r-device: ${px(L.device.radius)};\n  --l-phone-w: ${px(L.device.phoneWidth)};\n}\n` +
+    `@media (max-width: ${px(t.layout.phoneMax)}) { :root { --l-section: ${px(L.sectionPhone)}; ${phone} } }\n`;
+}
+
 const vars = [...rules].sort().map(([cls, decl]) => `.${cls} { ${decl}; }`).join('\n');
-const css = toCss(tokens).replaceAll('url(fonts/', 'url(/fonts/') +
+const css = toCss(tokens).replaceAll('url(fonts/', 'url(/fonts/') + landingCss(tokens) +
   `\n/* Recadrages et positions (générés par design/build.mjs depuis les pages). */\n${vars}\n`;
 fs.writeFileSync(path.join(root, 'theme.css'), css);
 

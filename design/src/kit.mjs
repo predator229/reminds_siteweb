@@ -85,7 +85,7 @@ export function header(c) {
   <a class="brand" href="${href('home')}"><img src="${P}images/icon-192.png" width="32" height="32" alt=""><span>Reminds</span></a>
   <nav class="nav" aria-label="${t('Navigation principale', 'Main navigation')}">${nav}</nav>
   <div class="top__tools">
-    <a class="iconbtn iconbtn--text" href="${href(c.key, other)}" hreflang="${other}" lang="${other}" aria-label="${t('English version', 'Version française')}">${other.toUpperCase()}</a>
+    <a class="iconbtn iconbtn--text" href="${href(c.key === 'notfound' ? 'home' : c.key, other)}" hreflang="${other}" lang="${other}" aria-label="${t('English version', 'Version française')}">${other.toUpperCase()}</a>
     <button class="iconbtn" type="button" data-theme-toggle aria-label="${t('Basculer le thème clair ou sombre', 'Switch light or dark theme')}">${icon('moon', 'only-light')}${icon('sun', 'only-dark')}</button>
     <a class="btn btn--secondary top__open" href="/app/">${t('Ouvrir Reminds', 'Open Reminds')}</a>
     <button class="iconbtn top__menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="${t('Menu', 'Menu')}">${icon('menu', 'only-closed')}${icon('x', 'only-open')}</button>
