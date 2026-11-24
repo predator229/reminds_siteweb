@@ -1,3 +1,6 @@
 downloads/
 .DS_Store
 node_modules/
+design/compare/*/
+design/compare/*.png
+design/compare/run.log
