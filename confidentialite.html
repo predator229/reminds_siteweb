@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confidentialité &amp; RGPD | Reminds</title>
-<meta name="description" content="Politique de confidentialité de Reminds : données collectées, finalités, durées de conservation, droits RGPD et sous-traitants.">
+<meta name="description" content="Politique de confidentialité de Reminds : données collectées, chiffrement de vos conversations et ce que le serveur peut encore voir, durées de conservation, droits RGPD et sous-traitants.">
 <link rel="canonical" href="https://reminds.cybersds.fr/confidentialite.html">
 <link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/confidentialite.html">
 <link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/privacy.html">
@@ -18,7 +18,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Reminds">
 <meta property="og:title" content="Confidentialité &amp; RGPD | Reminds">
-<meta property="og:description" content="Politique de confidentialité de Reminds : données collectées, finalités, durées de conservation, droits RGPD et sous-traitants.">
+<meta property="og:description" content="Politique de confidentialité de Reminds : données collectées, chiffrement de vos conversations et ce que le serveur peut encore voir, durées de conservation, droits RGPD et sous-traitants.">
 <meta property="og:url" content="https://reminds.cybersds.fr/confidentialite.html">
 <meta property="og:image" content="https://reminds.cybersds.fr/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +55,7 @@
     <header class="doc__head">
   <p class="doc__kicker">Confidentialité &amp; RGPD</p>
   <h1 class="h2">Vos données, vos droits</h1>
-  <p class="meta">Dernière mise à jour : 23 novembre 2026</p>
+  <p class="meta">Dernière mise à jour : 26 novembre 2026</p>
 </header>
     
         
@@ -70,11 +70,38 @@
         <p><strong>Si vous partagez une conversation :</strong> l'adresse <span class="nw">e-mail</span> de la personne invitée et son nom dans la conversation, pour lui envoyer l'invitation et lui ouvrir l'accès à cette conversation, et à elle seule. Chaque invitation est notée dans le journal de connexions.</p>
         <p><strong>Présence :</strong> l'heure de votre dernière activité dans Reminds est enregistrée. Elle est montrée uniquement à la personne avec qui la conversation est partagée (« vu il y a 5 min »).</p>
         <p><strong>Journal de connexions et d'erreurs :</strong> les connexions (réussies ou refusées), les déconnexions et les erreurs techniques de l'app sont notées avec la date, votre adresse <span class="nw">e-mail</span>, l'adresse IP, le type d'appareil et la version de l'app. Ce journal sert uniquement à la sécurité et à la correction des bugs. Il ne contient jamais le texte de vos messages ni vos recherches. Seul l'éditeur y a accès.</p>
-        <p><strong>Si votre conversation est importée :</strong> le contenu de votre export Messenger, c'est-à-dire les messages, les noms des participants, les dates, les photos, les GIF, les audios et les fichiers. Finalité unique : vous permettre de la relire. Cette conversation contient aussi les messages d'autres personnes. Ils ne sont montrés qu'aux personnes invitées sur cette conversation, jamais publiés, jamais analysés à d'autres fins.</p>
+        <p><strong>Si votre conversation est importée :</strong> le contenu de votre export Messenger, c'est-à-dire les messages, les noms des participants, les dates, les photos, les GIF, les audios et les fichiers. Finalité unique : vous permettre de la relire. Cette conversation contient aussi les messages d'autres personnes. Ils ne sont montrés qu'aux personnes invitées sur cette conversation, jamais publiés, jamais analysés à d'autres fins. Si votre compte a une clé, le contenu est chiffré (voir « Chiffrement de vos conversations »).</p>
         <p><strong>Si vous importez votre export Facebook :</strong> le fichier envoyé n'est conservé que le temps de l'import. Il est ouvert et lu dans un environnement isolé, séparé du reste du serveur, puis effacé dès la fin de l'import, ou au bout de 24 heures si l'import n'est pas terminé. Il n'est jamais partagé. Seules les conversations que vous choisissez sont gardées, comme décrit ci-dessus.</p>
         <p><strong>Quand vous utilisez l'app :</strong> vos signets, leurs notes et votre position de lecture, pour les retrouver à la prochaine ouverture. Sur le téléphone (iPhone ou Android), l'app garde en cache les derniers messages lus et les médias vus, pour la lecture hors ligne ; vous pouvez vider ce cache depuis les réglages.</p>
         <p><strong>Face ID et biométrie Android :</strong> la reconnaissance (visage, empreinte ou code de l'appareil) est faite par le téléphone lui-même. Ni votre visage, ni votre empreinte, ni aucune donnée biométrique ne nous parviennent. Sur Android, les données de l'app sont exclues de la sauvegarde Google et du transfert vers un autre appareil.</p>
         <p>Aucune autre utilisation, aucune revente, aucune publicité.</p>
+        <h2>Chiffrement de vos conversations</h2>
+        <p>Reminds chiffre vos conversations avec une clé qui n'existe que chez vous. Ce n'est pas un chiffrement de bout en bout complet : le serveur lit votre import le temps de son analyse. Une fois l'analyse terminée, il ne peut plus lire vos messages.</p>
+        <p><strong>Ce qui est chiffré :</strong> le texte des messages, les noms des participants et des expéditeurs, les titres des conversations, les photos, vidéos, audios, fichiers et leurs vignettes, les statistiques (mots et émojis les plus fréquents), les notes de vos signets et les sauvegardes de ces données. Une copie de la base de données, des médias, des sauvegardes ou du disque du serveur ne permet pas de les lire.</p>
+        <p><strong>Votre clé :</strong> à la création de votre compte (ou à votre première connexion avec la version 2.0), l'app crée sur votre appareil une paire de clés propre à votre compte. La clé publique est envoyée au serveur ; la clé privée ne le quitte jamais. Sur iPhone, elle est gardée dans le Trousseau de l'appareil ; sur le web, dans votre navigateur. Le serveur ne garde aucune clé capable de relire vos données.</p>
+        <p><strong>Fichier de secours :</strong> l'app vous fait télécharger un fichier de secours qui contient votre clé privée, protégé par une phrase secrète d'au moins 12 caractères que vous choisissez. Il sert à ouvrir vos conversations sur un nouvel appareil. Nous ne connaissons ni cette phrase ni cette clé. Si vous perdez tous vos appareils et le fichier, ou si vous oubliez la phrase, nous ne pouvons rien récupérer : vos conversations restent illisibles pour toujours. La seule issue est de réinitialiser le compte, ce qui efface vos données, puis de réimporter.</p>
+        <p><strong>Import :</strong> votre export est envoyé au serveur, analysé en clair dans un environnement isolé, puis chiffré avec votre clé. Le fichier envoyé et les résultats temporaires sont effacés dès la fin de l'analyse.</p>
+        <p><strong>Recherche :</strong> votre app envoie au serveur des codes opaques calculés à partir des mots cherchés, et le serveur renvoie les messages correspondants sans jamais lire les mots. Seuls les mots entiers sont trouvés : la recherche par début de mot n'existe plus.</p>
+        <p><strong>Partage :</strong> quand vous partagez une conversation, votre app donne à la personne invitée la clé de cette conversation, chiffrée pour sa propre clé. Si elle n'a pas encore de clé, le partage se termine à votre prochaine ouverture de l'app. Retirer une personne supprime son accès côté serveur ; la clé de la conversation n'est pas changée pour autant.</p>
+        <h2>Ce que le serveur peut encore voir</h2>
+        <p>Voici la liste, telle quelle :</p>
+        <ul>
+          <li>les adresses <span class="nw">e-mail</span> des comptes et des personnes avec qui vous partagez ;</li>
+          <li>les dates et heures des messages, et leur nombre ;</li>
+          <li>la taille de chaque message, son nombre de mots, et s'il contient du texte ;</li>
+          <li>le type et la taille des médias (photo, vidéo, audio, fichier) ;</li>
+          <li>les compteurs par heure des statistiques ;</li>
+          <li>quels messages ont le même expéditeur, sans son nom (une empreinte) ;</li>
+          <li>le nombre de participants d'une conversation ;</li>
+          <li>quels messages contiennent un même mot, et à quelle fréquence, sans lire ce mot : l'index de recherche est fait de codes opaques ;</li>
+          <li>pendant un import, tout ce qui est analysé, en clair ; et, jusqu'à 7 jours si l'import attend que vous choisissiez vos conversations, les titres et les participants des fils analysés ;</li>
+          <li>les anciens blocs du disque : après une suppression ou un chiffrement, ils ne sont pas réécrits, et une ancienne version (en clair pour ce qui a été importé avant la clé) peut y rester un temps.</li>
+        </ul>
+        <p>Les empreintes (expéditeurs, participants, fils) sont calculées avec un secret gardé hors de la base. Sans ce secret, personne ne peut les tester. Si le serveur entier était piraté, base de données et secret ensemble, l'attaquant pourrait confirmer une supposition (par exemple qu'un nom donné figure dans une conversation), sans pouvoir lire les messages. Deux comptes dont les conversations ont les mêmes participants ont la même empreinte de participants : cela permet de reconnaître une conversation partagée, mais relie aussi ces conversations entre elles.</p>
+        <p>Sur le web, l'app est livrée par notre serveur : un serveur piraté pourrait livrer un code qui vole votre clé au chargement suivant. L'app iPhone, signée, n'a pas ce risque. Un serveur malveillant pourrait aussi attribuer un message à un autre expéditeur, ou changer son état « retiré », sans que le déchiffrement échoue.</p>
+        <h2>Chiffrement optionnel, obligatoire plus tard</h2>
+        <p>Pour l'instant, le chiffrement est optionnel (mode mixte). Tant qu'un compte n'a pas de clé, ses conversations restent en clair sur le serveur, et dans les sauvegardes qui les contiennent.</p>
+        <p>Le chiffrement deviendra obligatoire plus tard, et nous l'annoncerons à l'avance. À ce moment-là, un compte sans clé recevra un <span class="nw">e-mail</span> de rappel, puis ses conversations seront supprimées 30 jours plus tard.</p>
         <h2>Combien de temps</h2>
         <p>Codes de connexion : à usage unique, valables quelques minutes.</p>
         <p>Sessions : 15 minutes, renouvelées par un jeton valable 30 jours au plus, ou jusqu'à votre déconnexion.</p>
@@ -84,6 +111,7 @@
         <p>Demandes d'accès : tant que la demande est en attente, puis 12 mois après un refus. Une demande validée devient votre accès et suit la règle ci-dessus.</p>
         <p>Journal de connexions et d'erreurs : 90 jours (180 jours pour les demandes d'accès et les décisions de l'éditeur), puis effacement automatique.</p>
         <p>Heure de dernière activité : tant que votre compte existe, remplacée à chaque utilisation.</p>
+        <p>Clé publique de votre compte et clés de vos conversations (chiffrées) : tant que votre compte existe, effacées avec lui ou à sa réinitialisation. Votre clé privée et votre fichier de secours restent chez vous : nous n'en avons aucune copie.</p>
         <h2>Vos droits (RGPD)</h2>
         <p>Vous pouvez demander l'accès à vos données, leur rectification, leur effacement, leur portabilité (une copie dans un format lisible), ou vous opposer à leur traitement. Écrivez à <a href="mailto:contact@cybersds.fr">contact@cybersds.fr</a> : réponse sous 30 jours.</p>
         <p>Vous apparaissez dans une conversation importée par quelqu'un d'autre ? Les mêmes droits s'appliquent : écrivez à <a href="mailto:contact@cybersds.fr">contact@cybersds.fr</a>.</p>
