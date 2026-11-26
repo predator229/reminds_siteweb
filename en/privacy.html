@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy &amp; GDPR | Reminds</title>
-<meta name="description" content="Reminds privacy policy: data collected, purposes, retention periods, GDPR rights and processors.">
+<meta name="description" content="Reminds privacy policy: data collected, encryption of your conversations and what the server can still see, retention periods, GDPR rights and processors.">
 <link rel="canonical" href="https://reminds.cybersds.fr/en/privacy.html">
 <link rel="alternate" hreflang="fr" href="https://reminds.cybersds.fr/confidentialite.html">
 <link rel="alternate" hreflang="en" href="https://reminds.cybersds.fr/en/privacy.html">
@@ -18,7 +18,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:site_name" content="Reminds">
 <meta property="og:title" content="Privacy &amp; GDPR | Reminds">
-<meta property="og:description" content="Reminds privacy policy: data collected, purposes, retention periods, GDPR rights and processors.">
+<meta property="og:description" content="Reminds privacy policy: data collected, encryption of your conversations and what the server can still see, retention periods, GDPR rights and processors.">
 <meta property="og:url" content="https://reminds.cybersds.fr/en/privacy.html">
 <meta property="og:image" content="https://reminds.cybersds.fr/images/og-image-en.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +55,7 @@
     <header class="doc__head">
   <p class="doc__kicker">Privacy &amp; GDPR</p>
   <h1 class="h2">Your data, your rights</h1>
-  <p class="meta">Last updated: 23 November 2026</p>
+  <p class="meta">Last updated: 26 November 2026</p>
 </header>
     
         
@@ -70,11 +70,38 @@
         <p><strong>If you share a conversation:</strong> the invited person’s <span class="nw">e-mail</span> address and their name in the conversation, to send them the invitation and give them access to that conversation, and that conversation only. Each invitation is recorded in the sign-in log.</p>
         <p><strong>Presence:</strong> the time of your last activity in Reminds is recorded. It is shown only to the person the conversation is shared with (“seen 5 min ago”).</p>
         <p><strong>Sign-in and error log:</strong> sign-ins (successful or refused), sign-outs and technical errors in the app are recorded with the date, your <span class="nw">e-mail</span> address, the IP address, the device type and the app version. This log is used only for security and bug fixing. It never contains the text of your messages or your searches. Only the publisher can access it.</p>
-        <p><strong>If your conversation is imported:</strong> the content of your Messenger export, meaning the messages, participants’ names, dates, photos, GIFs, voice messages and files. Sole purpose: letting you reread it. This conversation also contains other people’s messages. They are shown only to the people invited to that conversation, never published, never analysed for any other purpose.</p>
+        <p><strong>If your conversation is imported:</strong> the content of your Messenger export, meaning the messages, participants’ names, dates, photos, GIFs, voice messages and files. Sole purpose: letting you reread it. This conversation also contains other people’s messages. They are shown only to the people invited to that conversation, never published, never analysed for any other purpose. If your account has a key, the content is encrypted (see “Encryption of your conversations”).</p>
         <p><strong>If you import your Facebook export:</strong> the file you upload is kept only for the duration of the import. It is opened and read in an isolated environment, separate from the rest of the server, then deleted as soon as the import ends, or after 24 hours if the import is not completed. It is never shared. Only the conversations you choose are kept, as described above.</p>
         <p><strong>When you use the app:</strong> your bookmarks, their notes and your reading position, so you find them next time. On the phone (iPhone or Android), the app caches the latest messages read and the media viewed, for offline reading; you can clear this cache in the settings.</p>
         <p><strong>Face ID and Android biometrics:</strong> recognition (face, fingerprint or device passcode) is performed by the phone itself. Neither your face, nor your fingerprint, nor any biometric data ever reaches us. On Android, the app’s data is excluded from Google backup and from transfer to another device.</p>
         <p>No other use, no resale, no advertising.</p>
+        <h2>Encryption of your conversations</h2>
+        <p>Reminds encrypts your conversations with a key that exists only with you. It is not full end-to-end encryption: the server reads your import while it analyses it. Once the analysis is over, it can no longer read your messages.</p>
+        <p><strong>What is encrypted:</strong> message text, the names of participants and senders, conversation titles, photos, videos, voice messages, files and their thumbnails, statistics (most frequent words and emojis), your bookmark notes and the backups of this data. A copy of the database, the media, the backups or the server’s disk does not let anyone read them.</p>
+        <p><strong>Your key:</strong> when you create your account (or on your first sign-in with version 2.0), the app creates a key pair on your device, specific to your account. The public key is sent to the server; the private key never leaves your device. On iPhone it is kept in the device Keychain; on the web, in your browser. The server keeps no key able to read your data again.</p>
+        <p><strong>Recovery file:</strong> the app has you download a recovery file that contains your private key, protected by a passphrase of at least 12 characters that you choose. It is used to open your conversations on a new device. We know neither this passphrase nor this key. If you lose all your devices and the file, or if you forget the passphrase, we cannot recover anything: your conversations stay unreadable forever. The only way out is to reset the account, which erases your data, and then import again.</p>
+        <p><strong>Import:</strong> your export is sent to the server, analysed in clear in an isolated environment, then encrypted with your key. The uploaded file and the temporary results are deleted as soon as the analysis ends.</p>
+        <p><strong>Search:</strong> your app sends the server opaque codes computed from the words you search for, and the server returns the matching messages without ever reading the words. Only whole words are found: searching by the start of a word no longer exists.</p>
+        <p><strong>Sharing:</strong> when you share a conversation, your app gives the invited person the key to that conversation, encrypted for their own key. If they do not have a key yet, the sharing is completed the next time you open the app. Removing a person deletes their access on the server; the conversation key is not changed as a result.</p>
+        <h2>What the server can still see</h2>
+        <p>Here is the list, as it is:</p>
+        <ul>
+          <li>the <span class="nw">e-mail</span> addresses of accounts and of the people you share with;</li>
+          <li>the dates and times of messages, and how many there are;</li>
+          <li>the size of each message, its number of words, and whether it contains text;</li>
+          <li>the type and size of media (photo, video, voice message, file);</li>
+          <li>the hourly counters of the statistics;</li>
+          <li>which messages have the same sender, without the name (a fingerprint);</li>
+          <li>the number of participants in a conversation;</li>
+          <li>which messages contain the same word, and how often, without reading that word: the search index is made of opaque codes;</li>
+          <li>during an import, everything that is analysed, in clear; and, for up to 7 days if the import is waiting for you to choose your conversations, the titles and participants of the threads analysed;</li>
+          <li>old disk blocks: after a deletion or an encryption they are not rewritten, and an earlier version (in clear for what was imported before the key) may remain there for a while.</li>
+        </ul>
+        <p>Fingerprints (senders, participants, threads) are computed with a secret kept outside the database. Without this secret, nobody can test them. If the whole server were breached, database and secret together, the attacker could confirm a guess (for example that a given name appears in a conversation), without being able to read the messages. Two accounts whose conversations have the same participants have the same participants fingerprint: this lets us recognise a shared conversation, but it also links those conversations together.</p>
+        <p>On the web, the app is delivered by our server: a breached server could deliver code that steals your key on the next load. The signed iPhone app does not have this risk. A malicious server could also attribute a message to another sender, or change its “unsent” state, without decryption failing.</p>
+        <h2>Encryption optional now, mandatory later</h2>
+        <p>For now, encryption is optional (mixed mode). As long as an account has no key, its conversations stay in clear on the server, and in the backups that contain them.</p>
+        <p>Encryption will become mandatory later, and we will announce it in advance. At that point, an account without a key will receive a reminder <span class="nw">e-mail</span>, and its conversations will be deleted 30 days later.</p>
         <h2>How long</h2>
         <p>Sign-in codes: single use, valid for a few minutes.</p>
         <p>Sessions: 15 minutes, renewed by a token valid for 30 days at most, or until you sign out.</p>
@@ -84,6 +111,7 @@
         <p>Access requests: while the request is pending, then 12 months after a refusal. An approved request becomes your access and follows the rule above.</p>
         <p>Sign-in and error log: 90 days (180 days for access requests and the publisher’s decisions), then deleted automatically.</p>
         <p>Time of last activity: as long as your account exists, overwritten each time you use it.</p>
+        <p>Your account’s public key and your conversation keys (encrypted): as long as your account exists, erased with it or when it is reset. Your private key and your recovery file stay with you: we hold no copy.</p>
         <h2>Your rights (GDPR)</h2>
         <p>You can ask to access your data, have it corrected, erased or ported (a copy in a readable format), or object to its processing. Write to <a href="mailto:contact@cybersds.fr">contact@cybersds.fr</a>: we answer within 30 days.</p>
         <p>You appear in a conversation imported by someone else? The same rights apply: write to <a href="mailto:contact@cybersds.fr">contact@cybersds.fr</a>.</p>
